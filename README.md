@@ -1,5 +1,8 @@
 # codew
 
+<a href="https://www.npmjs.com/package/codew"><img src="https://img.shields.io/npm/v/codew"></a>
+[![CI](https://github.com/bisquit/codew/actions/workflows/ci.yml/badge.svg)](https://github.com/bisquit/codew/actions/workflows/ci.yml)
+
 **This project is work in progress. Do NOT use.**
 
 Open folder as a vscode multi-root workspace.
