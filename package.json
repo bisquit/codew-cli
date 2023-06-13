@@ -100,5 +100,8 @@
   "bugs": {
     "url": "https://github.com/bisquit/codew/issues"
   },
-  "keywords": []
+  "keywords": [
+    "vscode",
+    "workspace"
+  ]
 }
