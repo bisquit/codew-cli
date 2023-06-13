@@ -7,6 +7,10 @@
 
 Open folder as a vscode multi-root workspace.
 
+<div align="center">
+  <img src="./assets/demo.gif" width="70%" />
+</div>
+
 ## Motivation
 
 VSCode's workspace can keep its own settings such as themes, but they are stored in directory inside it if you open a directory via `code <folder>`.
