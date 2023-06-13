@@ -9,6 +9,7 @@ Open folder as a vscode multi-root workspace.
 
 <div align="center">
   <img src="./assets/demo.gif" width="70%" />
+  <p><i>Example with Peacock</i></p>
 </div>
 
 ## Motivation
