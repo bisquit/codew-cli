@@ -3,7 +3,9 @@
 import { cli } from 'cleye';
 
 import * as pkg from '../package.json';
-import { createWorkspace } from './usecases/create-workspace';
+import { createWorkspace } from './utils/create-workspace';
+import { getWorkspace } from './utils/get-workspace';
+import { openWorkspace } from './utils/open-workspace';
 
 const argv = cli({
   name: 'codew',
@@ -21,4 +23,11 @@ const argv = cli({
 });
 
 const path = argv._.path;
-createWorkspace(path);
+
+const workspace = getWorkspace(path);
+if (workspace) {
+  await openWorkspace(workspace);
+} else {
+  const workspace = await createWorkspace(path);
+  await openWorkspace(workspace);
+}
