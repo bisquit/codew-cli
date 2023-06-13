@@ -1,7 +1,7 @@
 {
   "name": "codew",
   "description": "Open folder as a vscode multi-root workspace",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.js",
