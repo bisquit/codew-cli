@@ -24,7 +24,7 @@ const argv = cli({
 
 const path = argv._.path;
 
-const workspace = getWorkspace(path);
+const workspace = await getWorkspace(path);
 if (workspace) {
   await openWorkspace(workspace);
 } else {

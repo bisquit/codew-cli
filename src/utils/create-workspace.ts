@@ -4,7 +4,7 @@ import { resolve } from 'node:path';
 import { mkdirp } from 'mkdirp';
 
 import { workspaceDir } from '../config';
-import { db } from '../db';
+import * as db from '../db';
 import { createFileComponents } from './file-components';
 import template from './template';
 
@@ -20,9 +20,7 @@ export async function createWorkspace(path: string) {
   await mkdirp(workspaceDir);
   await writeFile(workspacePath, data, {});
 
-  db.data.workspaces.push({ path: filepath, workspace: workspacePath });
-
-  await db.write();
+  await db.createWorkspace({ path: filepath, workspace: workspacePath });
 
   return workspacePath;
 }

@@ -1,11 +1,11 @@
 import { resolve } from 'node:path';
 
-import { db } from '../db';
+import * as db from '../db';
 import { createFileComponents } from './file-components';
-export function getWorkspace(path: string): string | undefined {
+export async function getWorkspace(path: string): Promise<string | undefined> {
   const { filepath } = createFileComponents(resolve(process.cwd(), path));
 
-  const workspace = db.data.workspaces.find(
+  const workspace = (await db.getWorkspaces()).find(
     (w) => w.path === filepath
   )?.workspace;
 
