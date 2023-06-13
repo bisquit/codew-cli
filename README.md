@@ -1,5 +1,7 @@
 # codew
 
+**This project is work in progress. Do NOT use.**
+
 Open folder as a vscode multi-root workspace.
 
 ## Motivation
