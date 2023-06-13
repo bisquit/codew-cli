@@ -14,11 +14,11 @@ const db = new Low<Data>(adapter, defaultData);
 
 await db.read();
 
-export async function getWorkspaces(): Promise<Workspace[]> {
+export async function readWorkspaces(): Promise<ReadonlyArray<Workspace>> {
   return db.data.workspaces;
 }
 
-export async function createWorkspace(workspace: Workspace) {
+export async function insertWorkspace(workspace: Workspace) {
   db.data.workspaces.push(workspace);
   await db.write();
 }

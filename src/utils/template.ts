@@ -1,8 +1,14 @@
-export default `
+type TemplateVariables = {
+  path: string;
+};
+
+export default function ({ path }: TemplateVariables) {
+  return `
 {
   "folders": [
     {
-      "path": "__PATH__"
+      "path": "${path}"
     }
   ]
 }`.trim();
+}

@@ -42,6 +42,8 @@ yarn global add codew
 pnpm add -g codew
 ```
 
+Also, make sure that `code` command is installed. (Hit `code -v`, otherwise follow [here](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line))
+
 ## Usage
 
 Hit `codew` instead of `code`. Then it opens folder as a Multi-root Workspace.
@@ -57,7 +59,7 @@ codew ~/Desktop/dir
 ```
 
 Workspace settings (`.code-workspace`) are automatically created and stored in `$HOME/.codew/workspaces`.
-  
+
 ## Usecases
 
 - Use with theme switcher such as [Peacock](https://github.com/johnpapa/vscode-peacock)
