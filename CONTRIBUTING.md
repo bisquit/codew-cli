@@ -6,7 +6,7 @@ pnpm i
 
 # Run src (index.ts) directly
 pnpm dev
-pnpm dev https://github.com/bisquit/rpget/tree/tests/basic/src/x
+pnpm dev .
 ```
 
 ### Unit Testing

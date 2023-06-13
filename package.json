@@ -20,7 +20,7 @@
     "dev": "cross-env DEBUG=codew tsx src/index.ts",
     "build-base": "tsup src/index.ts --format esm --clean",
     "build": "pnpm build-base --minify",
-    "build:debug": "pnpm build-base --env.RPGET_MODE=DEBUG",
+    "build:debug": "pnpm build-base --env.DEBUG=codew",
     "test": "vitest",
     "test:coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.all --coverage.clean --coverage.include=src/core --coverage.exclude=**/types.ts",
     "test:ci": "pnpm run test:coverage --run",
