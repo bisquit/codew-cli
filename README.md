@@ -52,6 +52,11 @@ codew ~/Desktop/dir
 ```
 
 Workspace settings (`.code-workspace`) are automatically created and stored in `$HOME/.codew/workspaces`.
+  
+## Usecases
+
+- Use with theme switcher such as [Peacock](https://github.com/johnpapa/vscode-peacock)
+  - In actuality, this project started with the desire to use Peacock in a single folder
 
 ## Uninstall
 
