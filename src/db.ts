@@ -1,7 +1,7 @@
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 
-import { codewHome } from './config';
+import { codewHomeDir } from './config';
 
 type Workspace = { path: string; workspace: string };
 type Data = {
@@ -9,16 +9,21 @@ type Data = {
 };
 
 const defaultData: Data = { workspaces: [] };
-const adapter = new JSONFile<Data>(`${codewHome}/db.json`);
-const db = new Low<Data>(adapter, defaultData);
+const adapter = new JSONFile<Data>(`${codewHomeDir}/db.json`);
 
-await db.read();
+async function getDb() {
+  const db = new Low<Data>(adapter, defaultData);
+  await db.read();
+  return db;
+}
 
 export async function readWorkspaces(): Promise<ReadonlyArray<Workspace>> {
+  const db = await getDb();
   return db.data.workspaces;
 }
 
 export async function insertWorkspace(workspace: Workspace) {
+  const db = await getDb();
   db.data.workspaces.push(workspace);
   await db.write();
 }

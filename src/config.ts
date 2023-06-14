@@ -1,6 +1,4 @@
 import { homedir } from 'node:os';
 
-const home = homedir();
-
-export const codewHome = `${home}/.codew`;
-export const workspaceDir = `${codewHome}/workspaces`;
+export const codewHomeDir = `${homedir()}/.codew`;
+export const workspaceDir = `${codewHomeDir}/workspaces`;

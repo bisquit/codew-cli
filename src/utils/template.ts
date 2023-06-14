@@ -1,8 +1,8 @@
-type TemplateVariables = {
+type CreateWorkspaceFileProps = {
   path: string;
 };
 
-export default function ({ path }: TemplateVariables) {
+export function createWorkspaceTemplate({ path }: CreateWorkspaceFileProps) {
   return `
 {
   "folders": [
