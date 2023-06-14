@@ -9,7 +9,6 @@ beforeEach(() => {
   vi.mock('execa', () => {
     return {
       $: (...args: any) => {
-        console.log('mocked $ ', args);
         spy(args);
       },
     };
