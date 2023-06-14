@@ -6,6 +6,10 @@ import { getWorkspaces } from '../operations/get-workspaces';
 export default command(
   {
     name: 'list',
+
+    help: {
+      description: 'List workspaces',
+    },
   },
   async () => {
     const workspaces = await getWorkspaces();
