@@ -4,38 +4,44 @@ import { log } from '@clack/prompts';
 import { cli } from 'cleye';
 
 import * as pkg from '../package.json';
+import list from './commands/list';
 import { checkDir } from './operations/check-dir';
 import { createWorkspace } from './operations/create-workspace';
 import { getWorkspace } from './operations/get-workspace';
 import { openWorkspace } from './operations/open-workspace';
 
-const argv = cli({
-  name: 'codew',
+cli(
+  {
+    name: 'codew',
 
-  version: pkg.version,
+    version: pkg.version,
 
-  parameters: ['<path>'],
+    parameters: ['<path>'],
 
-  flags: {},
+    flags: {},
 
-  help: {
-    description: pkg.description,
-    examples: ['codew .'],
+    help: {
+      description: pkg.description,
+      examples: ['codew .'],
+    },
+
+    commands: [list],
   },
-});
+  async (argv) => {
+    const path = argv._.path;
 
-const path = argv._.path;
+    try {
+      await checkDir(path);
 
-try {
-  await checkDir(path);
-
-  const workspace = await getWorkspace(path);
-  if (workspace) {
-    await openWorkspace(workspace);
-  } else {
-    const workspace = await createWorkspace(path);
-    await openWorkspace(workspace);
+      const workspace = await getWorkspace(path);
+      if (workspace) {
+        await openWorkspace(workspace);
+      } else {
+        const workspace = await createWorkspace(path);
+        await openWorkspace(workspace);
+      }
+    } catch (e) {
+      log.error(`${e}`);
+    }
   }
-} catch (e) {
-  log.error(`${e}`);
-}
+);

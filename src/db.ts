@@ -3,8 +3,8 @@ import { JSONFile } from 'lowdb/node';
 
 import { codewHomeDir } from './config';
 
-type Workspace = { path: string; workspace: string };
-type Data = {
+export type Workspace = { path: string; workspace: string };
+export type Data = {
   workspaces: Workspace[];
 };
 
