@@ -16,7 +16,7 @@ beforeEach(async () => {
   if (existsSync(mocks.testHomedir())) {
     await rm(mocks.testHomedir(), { recursive: true, force: true });
   }
-  await mkdir(mocks.testHomedir());
+  await mkdir(mocks.testHomedir(), { recursive: true });
 
   vi.mock('node:os', () => {
     return {
