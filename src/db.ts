@@ -27,3 +27,9 @@ export async function insertWorkspace(workspace: Workspace) {
   db.data.workspaces.push(workspace);
   await db.write();
 }
+
+export async function dropWorkspaces() {
+  const db = await getDb();
+  db.data.workspaces = [];
+  await db.write();
+}

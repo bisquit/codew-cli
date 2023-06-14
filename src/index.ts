@@ -4,6 +4,7 @@ import { log } from '@clack/prompts';
 import { cli } from 'cleye';
 
 import * as pkg from '../package.json';
+import clean from './commands/clean';
 import list from './commands/list';
 import { checkDir } from './operations/check-dir';
 import { createWorkspace } from './operations/create-workspace';
@@ -25,7 +26,7 @@ cli(
       examples: ['codew .'],
     },
 
-    commands: [list],
+    commands: [list, clean],
   },
   async (argv) => {
     const path = argv._.path;
