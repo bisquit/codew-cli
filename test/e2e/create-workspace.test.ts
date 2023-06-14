@@ -1,5 +1,5 @@
 import { existsSync } from 'node:fs';
-import { mkdir, readFile, rm, rmdir } from 'node:fs/promises';
+import { mkdir, readFile, rm } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';

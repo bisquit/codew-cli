@@ -9,16 +9,11 @@ pnpm dev
 pnpm dev .
 ```
 
-### Unit Testing
+### Testing
 
 ```sh
-# Unit test
 pnpm test
 ```
-
-### E2E
-
-[HERE](e2e/README.md)
 
 ### Test local build version behavior
 
@@ -33,14 +28,14 @@ pnpm build --watch
 pnpm build:debug --watch
 
 # Then, cd any directory
-rpget
+codew
 ```
 
 If you installed published version, be sure removing it to avoid confliction.
 
 ```sh
 pnpm ls -g
-pnpm rm -g rpget
+pnpm rm -g codew
 ```
 
 ## publish
