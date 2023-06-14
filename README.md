@@ -2,6 +2,7 @@
 
 <a href="https://www.npmjs.com/package/codew"><img src="https://img.shields.io/npm/v/codew"></a>
 [![CI](https://github.com/bisquit/codew/actions/workflows/ci.yml/badge.svg)](https://github.com/bisquit/codew/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/bisquit/codew/branch/main/graph/badge.svg?token=MVivyKBgGR)](https://codecov.io/gh/bisquit/codew)
 
 **This project is work in progress. Do NOT use.**
 
