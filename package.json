@@ -22,7 +22,7 @@
     "build": "pnpm build-base --minify",
     "build:debug": "pnpm build-base --env.DEBUG=codew",
     "test": "vitest",
-    "test:coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.all --coverage.clean --coverage.include=src/core --coverage.exclude=**/types.ts",
+    "test:coverage": "vitest --coverage.enabled --coverage.provider=v8 --coverage.all --coverage.clean --coverage.include=src --coverage.exclude=src/index.ts",
     "test:ci": "pnpm run test:coverage --run",
     "lint": "run-p lint:*",
     "lint:eslint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",

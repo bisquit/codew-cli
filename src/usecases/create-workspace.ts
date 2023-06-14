@@ -5,17 +5,22 @@ import { mkdirp } from 'mkdirp';
 
 import { workspaceDir } from '../config';
 import { insertWorkspace } from '../db';
-import { createFileComponents } from './file-components';
-import template from './template';
+import { createFileComponents } from '../utils/file-components';
+import { createWorkspaceTemplate } from '../utils/template';
 
-export async function createWorkspace(path: string) {
+export async function createWorkspace(
+  dir: string,
+  options?: { workspaceName?: string }
+) {
   const { filepath, filename } = createFileComponents(
-    resolve(process.cwd(), path)
+    resolve(process.cwd(), dir)
   );
 
-  const data = template({ path: filepath });
+  const data = createWorkspaceTemplate({ path: filepath });
 
-  const workspacePath = `${workspaceDir}/${filename}.code-workspace`;
+  const workspacePath = `${workspaceDir}/${
+    options?.workspaceName ?? filename
+  }.code-workspace`;
 
   await mkdirp(workspaceDir);
   await writeFile(workspacePath, data, {});
