@@ -9,7 +9,7 @@ import { getWorkspace } from '../../src/operations/get-workspace';
 
 const mocks = vi.hoisted(() => {
   return {
-    testHomedir: () => resolve('e2e-tmp', basename(import.meta.url)),
+    testHomedir: () => resolve('test-tmp', basename(import.meta.url)),
   };
 });
 
