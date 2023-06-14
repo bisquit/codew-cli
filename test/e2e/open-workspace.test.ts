@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
-import { openWorkspace } from '../../src/usecases/open-workspace';
+import { openWorkspace } from '../../src/operations/open-workspace';
 
 const spy = vi.fn();
 

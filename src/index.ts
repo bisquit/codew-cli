@@ -3,9 +3,9 @@
 import { cli } from 'cleye';
 
 import * as pkg from '../package.json';
-import { createWorkspace } from './usecases/create-workspace';
-import { openWorkspace } from './usecases/open-workspace';
-import { getWorkspace } from './utils/get-workspace';
+import { createWorkspace } from './operations/create-workspace';
+import { getWorkspace } from './operations/get-workspace';
+import { openWorkspace } from './operations/open-workspace';
 
 const argv = cli({
   name: 'codew',

@@ -22,4 +22,4 @@ dist-ssr
 *.sw?
 
 coverage
-e2e-tmp-home
+e2e-tmp
