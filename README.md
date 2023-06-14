@@ -4,7 +4,7 @@
 [![CI](https://github.com/bisquit/codew/actions/workflows/ci.yml/badge.svg)](https://github.com/bisquit/codew/actions/workflows/ci.yml)
 [![codecov](https://codecov.io/gh/bisquit/codew/branch/main/graph/badge.svg?token=MVivyKBgGR)](https://codecov.io/gh/bisquit/codew)
 
-**This project is work in progress. May not work correctly.**
+**This project is work in progress. API may be changed.**
 
 Open folder as a vscode multi-root workspace.
 
