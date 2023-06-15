@@ -5,7 +5,7 @@ import { basename, resolve } from 'node:path';
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
 import { createWorkspace } from '../../src/operations/create-workspace';
-import { getWorkspace } from '../../src/operations/get-workspace';
+import { validateWorkspace } from '../../src/operations/validate-workspace';
 
 const mocks = vi.hoisted(() => {
   return {
@@ -30,13 +30,19 @@ afterEach(async () => {
   vi.restoreAllMocks();
 });
 
-test('getWorkspace', async () => {
-  expect(await getWorkspace('dir-1')).toBeUndefined();
-
+test('validateWorkspace', async () => {
   await createWorkspace('dir-1');
 
-  const workspace = await getWorkspace('dir-1');
-  expect(workspace).toBe(
-    resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace')
+  const codeWorkspace = resolve(
+    mocks.testHomedir(),
+    '.codew/workspaces/dir-1.code-workspace'
   );
+
+  expect(await validateWorkspace(codeWorkspace)).toBe(true);
+
+  // // remove .code-workspace directly
+  await rm(codeWorkspace, { recursive: true, force: true });
+
+  expect(await validateWorkspace(codeWorkspace)).toBe(false);
+  expect(existsSync(codeWorkspace)).toBe(false);
 });
