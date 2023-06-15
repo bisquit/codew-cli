@@ -28,6 +28,14 @@ export async function insertWorkspace(workspace: Workspace) {
   await db.write();
 }
 
+export async function deleteWorkspace(workspacePath: string) {
+  const db = await getDb();
+  db.data.workspaces = db.data.workspaces.filter(
+    (v) => v.workspace !== workspacePath
+  );
+  await db.write();
+}
+
 export async function dropWorkspaces() {
   const db = await getDb();
   db.data.workspaces = [];

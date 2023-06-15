@@ -9,5 +9,9 @@ export async function getWorkspace(dir: string): Promise<string | undefined> {
     (w) => w.path === filepath
   )?.workspace;
 
+  if (!workspacePath) {
+    return;
+  }
+
   return workspacePath;
 }
