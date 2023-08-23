@@ -30,5 +30,5 @@ export default command(
     } catch (e) {
       log.error(`${e}`);
     }
-  }
+  },
 );

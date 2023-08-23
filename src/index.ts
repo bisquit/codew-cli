@@ -46,5 +46,5 @@ cli(
     } catch (e) {
       log.error(`${e}`);
     }
-  }
+  },
 );

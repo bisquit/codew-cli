@@ -10,10 +10,10 @@ import { createWorkspaceTemplate } from '../utils/template';
 
 export async function createWorkspace(
   dir: string,
-  options?: { workspaceName?: string }
+  options?: { workspaceName?: string },
 ) {
   const { filepath, filename } = createFileComponents(
-    resolve(process.cwd(), dir)
+    resolve(process.cwd(), dir),
   );
 
   const data = createWorkspaceTemplate({ path: filepath });
