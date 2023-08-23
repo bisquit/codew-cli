@@ -28,6 +28,9 @@ dependencies:
     version: 5.1.0
 
 devDependencies:
+  '@bisquit/changelogithub-config':
+    specifier: ^0.0.0
+    version: 0.0.0
   '@typescript-eslint/eslint-plugin':
     specifier: ^6.4.0
     version: 6.4.0(@typescript-eslint/parser@6.4.0)(eslint@8.47.0)(typescript@5.1.6)
@@ -99,6 +102,11 @@ packages:
 
   /@bcoe/v8-coverage@0.2.3:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
+    dev: true
+
+  /@bisquit/changelogithub-config@0.0.0:
+    resolution: {integrity: sha512-6Q6E6FgE/8nsOefZ4Poq4j4l2lN9hDMhgBzk57Ox1iy1DZg0a84HgNxxKG9cLerIABJ+7IduDZCNc+VrJ8S+zw==}
+    engines: {node: '>=18.0.0'}
     dev: true
 
   /@clack/core@0.3.3:
