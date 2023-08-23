@@ -1,9 +1,9 @@
 # codew
 
-<a href="https://www.npmjs.com/package/codew"><img src="https://img.shields.io/npm/v/codew"></a>
-[![CI](https://github.com/bisquit/codew/actions/workflows/ci.yml/badge.svg)](https://github.com/bisquit/codew/actions/workflows/ci.yml)
-[![codecov](https://codecov.io/gh/bisquit/codew/branch/main/graph/badge.svg?token=MVivyKBgGR)](https://codecov.io/gh/bisquit/codew)
-[![Known Vulnerabilities](https://snyk.io/test/github/bisquit/codew/badge.svg)](https://snyk.io/test/github/bisquit/codew)
+<a href="https://www.npmjs.com/package/codew-cli"><img src="https://img.shields.io/npm/v/codew-cli"></a>
+[![CI](https://github.com/bisquit/codew-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/bisquit/codew-cli/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/bisquit/codew-cli/branch/main/graph/badge.svg?token=MVivyKBgGR)](https://codecov.io/gh/bisquit/codew-cli)
+[![Known Vulnerabilities](https://snyk.io/test/github/bisquit/codew-cli/badge.svg)](https://snyk.io/test/github/bisquit/codew-cli)
 
 **This project is work in progress. API may be changed.**
 
@@ -37,17 +37,38 @@ See https://code.visualstudio.com/docs/editor/workspaces#_singlefolder-workspace
 
 ## Install
 
-```sh
-npm i -g codew
-```
+<details>
+<summary>npm</summary>
+
+<br>
 
 ```sh
-yarn global add codew
+npm i -g codew-cli
 ```
 
+</details>
+
+<details>
+<summary>yarn</summary>
+
+<br>
+
 ```sh
-pnpm add -g codew
+yarn global add codew-cli
 ```
+
+</details>
+
+<details>
+<summary>pnpm</summary>
+
+<br>
+
+```sh
+pnpm add -g codew-cli
+```
+
+</details>
 
 Also, make sure that `code` command is installed. (Hit `code -v`, otherwise follow [here](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line))
 
@@ -74,6 +95,6 @@ Workspace settings (`.code-workspace`) are automatically created and stored in `
 
 ## Uninstall
 
-Hit uninstall command, for example, `npm rm -g codew`, `yarn global remove codew`, `pnpm rm -g codew`.
+Hit uninstall command, for example, `npm rm -g codew-cli`, `yarn global remove codew-cli`, `pnpm rm -g codew-cli`.
 
 Also, if you want to clean settings (including `.code-workspace`), remove `$HOME/.codew`.

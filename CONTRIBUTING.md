@@ -35,7 +35,7 @@ If you installed published version, be sure removing it to avoid confliction.
 
 ```sh
 pnpm ls -g
-pnpm rm -g codew
+pnpm rm -g codew-cli
 ```
 
 ## publish

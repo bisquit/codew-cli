@@ -1,5 +1,5 @@
 {
-  "name": "codew",
+  "name": "codew-cli",
   "description": "Open folder as a vscode multi-root workspace",
   "version": "0.1.1",
   "license": "MIT",
@@ -60,10 +60,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bisquit/codew.git"
+    "url": "https://github.com/bisquit/codew-cli.git"
   },
   "bugs": {
-    "url": "https://github.com/bisquit/codew/issues"
+    "url": "https://github.com/bisquit/codew-cli/issues"
   },
   "keywords": [
     "vscode",
