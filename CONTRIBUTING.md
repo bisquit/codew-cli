@@ -41,6 +41,8 @@ pnpm rm -g codew
 ## publish
 
 ```sh
-pnpm release
-#==> tag push triggers publish github actions
+# Bump version, commit, tag, push
+pnpm bump
 ```
+
+Then, Github Actions will publish to npm.
