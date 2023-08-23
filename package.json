@@ -40,12 +40,11 @@
     "slash": "^5.1.0"
   },
   "devDependencies": {
-    "@bisquit/changelogithub-config": "^0.0.0",
+    "@bisquit/changelogithub-config": "^0.0.9",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "@vitest/coverage-v8": "^0.34.2",
     "bumpp": "^9.2.0",
-    "changelogithub": "^0.12.12",
     "concurrently": "^8.2.1",
     "cross-env": "^7.0.3",
     "eslint": "^8.47.0",
