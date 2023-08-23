@@ -1,4 +1,4 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["github>bisquit/renovate-config"]
+  "extends": ["github>bisquit/shareable-config//packages/renovate/default"]
 }
