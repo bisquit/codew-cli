@@ -25,7 +25,10 @@ export async function createWorkspace(
   await mkdirp(workspaceDir);
   await writeFile(workspacePath, data, {});
 
-  await insertWorkspace({ path: filepath, workspace: workspacePath });
+  await insertWorkspace({
+    dirPath: filepath,
+    codeWorkspacePath: workspacePath,
+  });
 
   return workspacePath;
 }

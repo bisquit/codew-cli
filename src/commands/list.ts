@@ -16,7 +16,7 @@ export default command(
     const msg = [
       `${colors.cyan('All workspaces')} (total: ${workspaces.length})`,
       ...workspaces.map(
-        (w) => `${colors.white(w.workspace)} ${colors.dim(w.path)}`,
+        (w) => `${colors.white(w.codeWorkspacePath)} ${colors.dim(w.dirPath)}`,
       ),
     ].join('\n');
     console.log(msg);

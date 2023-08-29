@@ -3,7 +3,7 @@ import { JSONFile } from 'lowdb/node';
 
 import { codewHomeDir } from './config.js';
 
-export type Workspace = { path: string; workspace: string };
+export type Workspace = { dirPath: string; codeWorkspacePath: string };
 export type Data = {
   workspaces: Workspace[];
 };
@@ -31,7 +31,7 @@ export async function insertWorkspace(workspace: Workspace) {
 export async function deleteWorkspace(workspacePath: string) {
   const db = await getDb();
   db.data.workspaces = db.data.workspaces.filter(
-    (v) => v.workspace !== workspacePath,
+    (v) => v.codeWorkspacePath !== workspacePath,
   );
   await db.write();
 }
