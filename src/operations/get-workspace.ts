@@ -1,7 +1,7 @@
 import { resolve } from 'node:path';
 
-import { readWorkspaces } from '../db';
-import { createFileComponents } from '../utils/file-components';
+import { readWorkspaces } from '../db.js';
+import { createFileComponents } from '../utils/file-components.js';
 export async function getWorkspace(dir: string): Promise<string | undefined> {
   const { filepath } = createFileComponents(resolve(process.cwd(), dir));
 

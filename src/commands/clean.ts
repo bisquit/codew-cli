@@ -2,7 +2,7 @@ import { cancel, confirm, isCancel, log, outro } from '@clack/prompts';
 import { command } from 'cleye';
 import colors from 'picocolors';
 
-import { cleanWorkspaces } from '../operations/clean-workspaces';
+import { cleanWorkspaces } from '../operations/clean-workspaces.js';
 
 export default command(
   {

@@ -3,10 +3,10 @@ import { resolve } from 'node:path';
 
 import { mkdirp } from 'mkdirp';
 
-import { workspaceDir } from '../config';
-import { insertWorkspace } from '../db';
-import { createFileComponents } from '../utils/file-components';
-import { createWorkspaceTemplate } from '../utils/template';
+import { workspaceDir } from '../config.js';
+import { insertWorkspace } from '../db.js';
+import { createFileComponents } from '../utils/file-components.js';
+import { createWorkspaceTemplate } from '../utils/template.js';
 
 export async function createWorkspace(
   dir: string,

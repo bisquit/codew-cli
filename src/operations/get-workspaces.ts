@@ -1,4 +1,4 @@
-import { readWorkspaces, Workspace } from '../db';
+import { readWorkspaces, Workspace } from '../db.js';
 export async function getWorkspaces(): Promise<ReadonlyArray<Workspace>> {
   const workspaces = await readWorkspaces();
 

@@ -1,7 +1,7 @@
 import { command } from 'cleye';
 import colors from 'picocolors';
 
-import { getWorkspaces } from '../operations/get-workspaces';
+import { getWorkspaces } from '../operations/get-workspaces.js';
 
 export default command(
   {

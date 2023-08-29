@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 
-import { deleteWorkspace } from '../db';
+import { deleteWorkspace } from '../db.js';
 
 /**
  * validateor
