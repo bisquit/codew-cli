@@ -37,7 +37,7 @@ test('getWorkspaces', async () => {
   const workspaces = await getWorkspaces();
   expect(workspaces.length).toBe(1);
 
-  expect(workspaces.at(0)?.workspace).toBe(
+  expect(workspaces.at(0)?.codeWorkspacePath).toBe(
     resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace'),
   );
 });

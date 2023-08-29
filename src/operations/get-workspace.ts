@@ -6,8 +6,8 @@ export async function getWorkspace(dir: string): Promise<string | undefined> {
   const { filepath } = createFileComponents(resolve(process.cwd(), dir));
 
   const workspacePath = (await readWorkspaces()).find(
-    (w) => w.path === filepath,
-  )?.workspace;
+    (w) => w.dirPath === filepath,
+  )?.codeWorkspacePath;
 
   if (!workspacePath) {
     return;

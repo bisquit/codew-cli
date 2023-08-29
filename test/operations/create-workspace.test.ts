@@ -4,6 +4,7 @@ import { basename, resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
+import { DbData } from '../../src/db.ts';
 import { createWorkspace } from '../../src/operations/create-workspace.js';
 
 const mocks = vi.hoisted(() => {
@@ -50,10 +51,10 @@ test('createWorkspace', async () => {
       encoding: 'utf-8',
     },
   );
-  const db = JSON.parse(dbContent);
+  const db = JSON.parse(dbContent) as DbData;
   expect(db.workspaces.length).toBe(1);
-  expect(db.workspaces.at(0).path).toBe(resolve(process.cwd(), 'dir-1'));
-  expect(db.workspaces.at(0).workspace).toBe(
+  expect(db.workspaces.at(0)?.dirPath).toBe(resolve(process.cwd(), 'dir-1'));
+  expect(db.workspaces.at(0)?.codeWorkspacePath).toBe(
     resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace'),
   );
 
