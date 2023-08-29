@@ -1,7 +1,7 @@
 import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 
-import { codewHomeDir } from './config';
+import { codewHomeDir } from './config.js';
 
 export type Workspace = { path: string; workspace: string };
 export type Data = {

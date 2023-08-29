@@ -4,7 +4,7 @@ import { basename, resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
-import { checkDir } from '../../src/operations/check-dir';
+import { checkDir } from '../../src/operations/check-dir.js';
 
 const mocks = vi.hoisted(() => {
   return {
@@ -31,7 +31,7 @@ afterEach(async () => {
 
 test('checkDir', async () => {
   await expect(() =>
-    checkDir(resolve(mocks.testHomedir(), 'dir-1'))
+    checkDir(resolve(mocks.testHomedir(), 'dir-1')),
   ).rejects.toThrowError('invalid');
 
   await mkdir(resolve(mocks.testHomedir(), 'dir-1'), { recursive: true });
@@ -40,6 +40,6 @@ test('checkDir', async () => {
   expect(await checkDir(resolve(mocks.testHomedir(), 'dir-1'))).toBe(true);
 
   await expect(() =>
-    checkDir(resolve(mocks.testHomedir(), 'file-1'))
+    checkDir(resolve(mocks.testHomedir(), 'file-1')),
   ).rejects.toThrowError('not a directory');
 });

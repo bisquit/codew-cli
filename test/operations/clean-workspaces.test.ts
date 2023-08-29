@@ -4,8 +4,8 @@ import { basename, resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
-import { cleanWorkspaces } from '../../src/operations/clean-workspaces';
-import { createWorkspace } from '../../src/operations/create-workspace';
+import { cleanWorkspaces } from '../../src/operations/clean-workspaces.js';
+import { createWorkspace } from '../../src/operations/create-workspace.js';
 
 const mocks = vi.hoisted(() => {
   return {
@@ -35,14 +35,14 @@ test('cleanWorkspaces', async () => {
 
   expect(
     existsSync(
-      resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace')
-    )
+      resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace'),
+    ),
   ).toBe(true);
   const dbContent = await readFile(
     resolve(mocks.testHomedir(), '.codew/db.json'),
     {
       encoding: 'utf-8',
-    }
+    },
   );
   const db = JSON.parse(dbContent);
   expect(db.workspaces.length).toBe(1);
@@ -51,14 +51,14 @@ test('cleanWorkspaces', async () => {
 
   expect(
     existsSync(
-      resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace')
-    )
+      resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace'),
+    ),
   ).toBe(false);
   const dbContent2 = await readFile(
     resolve(mocks.testHomedir(), '.codew/db.json'),
     {
       encoding: 'utf-8',
-    }
+    },
   );
   const db2 = JSON.parse(dbContent2);
   expect(db2.workspaces.length).toBe(0);

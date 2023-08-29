@@ -3,27 +3,27 @@
 import { log } from '@clack/prompts';
 import { cli } from 'cleye';
 
-import * as pkg from '../package.json';
-import clean from './commands/clean';
-import list from './commands/list';
-import { checkDir } from './operations/check-dir';
-import { createWorkspace } from './operations/create-workspace';
-import { getWorkspace } from './operations/get-workspace';
-import { openWorkspace } from './operations/open-workspace';
-import { validateWorkspace } from './operations/validate-workspace';
+import { description, version } from '../package.json';
+import clean from './commands/clean.js';
+import list from './commands/list.js';
+import { checkDir } from './operations/check-dir.js';
+import { createWorkspace } from './operations/create-workspace.js';
+import { getWorkspace } from './operations/get-workspace.js';
+import { openWorkspace } from './operations/open-workspace.js';
+import { validateWorkspace } from './operations/validate-workspace.js';
 
 cli(
   {
     name: 'codew',
 
-    version: pkg.version,
+    version: version,
 
     parameters: ['<path>'],
 
     flags: {},
 
     help: {
-      description: pkg.description,
+      description: description,
       examples: ['codew .'],
     },
 

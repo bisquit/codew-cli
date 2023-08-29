@@ -4,8 +4,8 @@ import { basename, resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
-import { createWorkspace } from '../../src/operations/create-workspace';
-import { getWorkspaces } from '../../src/operations/get-workspaces';
+import { createWorkspace } from '../../src/operations/create-workspace.js';
+import { getWorkspaces } from '../../src/operations/get-workspaces.js';
 
 const mocks = vi.hoisted(() => {
   return {
@@ -38,6 +38,6 @@ test('getWorkspaces', async () => {
   expect(workspaces.length).toBe(1);
 
   expect(workspaces.at(0)?.workspace).toBe(
-    resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace')
+    resolve(mocks.testHomedir(), '.codew/workspaces/dir-1.code-workspace'),
   );
 });
