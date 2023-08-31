@@ -32,10 +32,10 @@ devDependencies:
     specifier: ^0.0.9
     version: 0.0.9
   '@typescript-eslint/eslint-plugin':
-    specifier: ^6.4.1
+    specifier: ^6.5.0
     version: 6.5.0(@typescript-eslint/parser@6.5.0)(eslint@8.48.0)(typescript@5.2.2)
   '@typescript-eslint/parser':
-    specifier: ^6.4.1
+    specifier: ^6.5.0
     version: 6.5.0(eslint@8.48.0)(typescript@5.2.2)
   '@vitest/coverage-v8':
     specifier: ^0.34.3
