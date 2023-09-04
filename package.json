@@ -25,7 +25,7 @@
     "prettier:fix": "prettier --write src",
     "typecheck": "tsc --noEmit",
     "staticcheck": "conc pnpm:lint pnpm:prettier pnpm:typecheck",
-    "bump": "bumpp"
+    "bump": "git checkout main && git pull && bumpp"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",
