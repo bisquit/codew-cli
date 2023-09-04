@@ -4,7 +4,7 @@ import { basename, resolve } from 'node:path';
 
 import { afterEach, beforeEach, expect, test, vi } from 'vitest';
 
-import { DbData } from '../../src/db.ts';
+import { DbData } from '../../src/db.js';
 import { createWorkspace } from '../../src/operations/create-workspace.js';
 
 const mocks = vi.hoisted(() => {
