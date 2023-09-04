@@ -12,7 +12,10 @@ Open folder as a vscode multi-root workspace.
   <p><i>Example with <a href="https://marketplace.visualstudio.com/items?itemName=bisquit.vscode-auto-colorize">Auto Colorize</a></i></p>
 </div>
 
-## Motivation
+<details>
+<summary>Motivation</summary>
+
+<br>
 
 VSCode's workspace can keep its own settings such as themes, but they are stored in directory inside it if you open a directory via `code <folder>`.
 
@@ -22,8 +25,12 @@ You can avoid this to create seperate `.code-workspace` file (which is called `M
 
 This tool bypasses that work with `codew` command.
 
+</details>
+
 <details>
 <summary>Recap VSCode Workspaces</summary>
+
+<br>
 
 VSCode opens folder as **Single-folder workspaces** if you opened with `code <folder>`. Against that, if you opened with `.code-workspace`, VSCode treats it as **Multi-root Workspace**.
 
