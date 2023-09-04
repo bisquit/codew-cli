@@ -2,14 +2,16 @@ name: Release
 
 on:
   push:
-    tags:
-      - 'v*'
+    branches:
+      - main
+      - beta
 
 jobs:
   release:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # to be able to publish a GitHub release
+      id-token: write # to enable use of OIDC for npm provenance
     steps:
       - uses: actions/checkout@v3
         with:
@@ -25,6 +27,8 @@ jobs:
       - name: install
         run: pnpm i
 
-      - run: npx changelogithub
+      - name: release
+        run: pnpm semantic-release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NPM_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
