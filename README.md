@@ -8,8 +8,8 @@
 Open folder as a vscode multi-root workspace.
 
 <div align="center">
-  <img src="./assets/demo.gif" width="70%" />
-  <p><i>Example with Peacock</i></p>
+  <img src="./assets/demo2.gif" width="70%" />
+  <p><i>Example with <a href="https://marketplace.visualstudio.com/items?itemName=bisquit.vscode-auto-colorize">Auto Colorize</a></i></p>
 </div>
 
 ## Motivation
