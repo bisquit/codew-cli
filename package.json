@@ -1,7 +1,7 @@
 {
   "name": "codew-cli",
   "description": "Open folder as a vscode multi-root workspace",
-  "version": "1.0.0-beta.0",
+  "version": "1.0.0-beta.1",
   "license": "MIT",
   "type": "module",
   "files": [
