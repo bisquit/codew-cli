@@ -5,8 +5,6 @@
 [![codecov](https://codecov.io/gh/bisquit/codew-cli/branch/main/graph/badge.svg?token=MVivyKBgGR)](https://codecov.io/gh/bisquit/codew-cli)
 [![Known Vulnerabilities](https://snyk.io/test/github/bisquit/codew-cli/badge.svg)](https://snyk.io/test/github/bisquit/codew-cli)
 
-**This project is work in progress. API may be changed.**
-
 Open folder as a vscode multi-root workspace.
 
 <div align="center">
@@ -81,17 +79,14 @@ Example:
 ```sh
 # open current directory as a multi-root workspace
 codew .
-
-# open specified directory
-codew ~/Desktop/dir
 ```
 
 Workspace settings (`.code-workspace`) are automatically created and stored in `$HOME/.codew/workspaces`.
 
-## Usecases
+## See also
 
-- Use with theme switcher such as [Peacock](https://github.com/johnpapa/vscode-peacock)
-  - In actuality, this project started with the desire to use Peacock in a single folder
+- [Auto Colorize](https://marketplace.visualstudio.com/items?itemName=bisquit.vscode-auto-colorize)
+  - VSCode extension to automatically colorize workspace
 
 ## Uninstall
 
