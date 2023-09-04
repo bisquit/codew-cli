@@ -31,8 +31,14 @@ jobs:
       - name: build
         run: pnpm build
 
+      - name: semver
+        id: semver
+        uses: akshens/semver-tag@v4
+        with:
+          version: ${{ github.ref_name }}
+
       - name: publish
-        run: pnpm publish --access public --no-git-checks
+        run: pnpm publish --access public --no-git-checks --tag ${{ steps.semver.outputs.tag }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
