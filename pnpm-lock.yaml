@@ -62,7 +62,7 @@ devDependencies:
     specifier: ^7.2.0
     version: 7.2.0(typescript@5.2.2)
   tsx:
-    specifier: ^3.12.9
+    specifier: ^3.12.10
     version: 3.12.10
   typescript:
     specifier: ^5.2.2
@@ -123,7 +123,7 @@ packages:
     resolution: {integrity: sha512-BDXFbYOJzT/NBEtp71cvsrGPwGAMGRB/349rwKuoxNSiKjPraNNnlK6MIIabViCjqZugu6j+xeMDlEkWdHHJSg==}
     dependencies:
       '@esbuild-kit/core-utils': 3.3.1
-      get-tsconfig: 4.6.0
+      get-tsconfig: 4.7.0
     dev: true
 
   /@esbuild-kit/core-utils@3.3.1:
@@ -1784,12 +1784,6 @@ packages:
     resolution: {integrity: sha512-VaUJspBffn/LMCJVoMvSAdmscJyS1auj5Zulnn5UoYcY531UWmdwhRWkcGKnGU93m5HSXP9LP2usOryrBtQowA==}
     engines: {node: '>=16'}
     dev: false
-
-  /get-tsconfig@4.6.0:
-    resolution: {integrity: sha512-lgbo68hHTQnFddybKbbs/RDRJnJT5YyGy2kQzVwbq+g67X73i+5MVTval34QxGkOe9X5Ujf1UYpCaphLyltjEg==}
-    dependencies:
-      resolve-pkg-maps: 1.0.0
-    dev: true
 
   /get-tsconfig@4.7.0:
     resolution: {integrity: sha512-pmjiZ7xtB8URYm74PlGJozDNyhvsVLUcpBa8DZBG3bWHwaHa9bPiRpiSfovw+fjhwONSCWKRyk+JQHEGZmMrzw==}
