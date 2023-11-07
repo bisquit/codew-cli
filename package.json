@@ -44,7 +44,7 @@
     "bumpp": "^9.2.0",
     "concurrently": "^8.2.2",
     "cross-env": "^7.0.3",
-    "eslint": "^8.52.0",
+    "eslint": "^8.53.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
