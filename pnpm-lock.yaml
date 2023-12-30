@@ -15,8 +15,8 @@ dependencies:
     specifier: ^8.0.1
     version: 8.0.1
   lowdb:
-    specifier: ^6.1.1
-    version: 6.1.1
+    specifier: ^7.0.1
+    version: 7.0.1
   mkdirp:
     specifier: ^3.0.1
     version: 3.0.1
@@ -2088,11 +2088,11 @@ packages:
       get-func-name: 2.0.2
     dev: true
 
-  /lowdb@6.1.1:
-    resolution: {integrity: sha512-HO13FCxI8SCwfj2JRXOKgXggxnmfSc+l0aJsZ5I34X3pwzG/DPBSKyKu3Zkgg/pNmx854SVgE2la0oUeh6wzNw==}
-    engines: {node: '>=16'}
+  /lowdb@7.0.1:
+    resolution: {integrity: sha512-neJAj8GwF0e8EpycYIDFqEPcx9Qz4GUho20jWFR7YiFeXzF1YMLdxB36PypcTSPMA+4+LvgyMacYhlr18Zlymw==}
+    engines: {node: '>=18'}
     dependencies:
-      steno: 3.1.1
+      steno: 4.0.2
     dev: false
 
   /lru-cache@6.0.0:
@@ -2601,9 +2601,9 @@ packages:
     resolution: {integrity: sha512-Rz6yejtVyWnVjC1RFvNmYL10kgjC49EOghxWn0RFqlCHGFpQx+Xe7yW3I4ceK1SGrWIGMjD5Kbue8W/udkbMJg==}
     dev: true
 
-  /steno@3.1.1:
-    resolution: {integrity: sha512-B7c6EVH7oEiaMRW36SjUnktkDwp/qd4pQiduylyiqvcZEZDeX0IIFZRBZdwO/RaVo60M0wkDwC0e8yeKaR4VGg==}
-    engines: {node: '>=16'}
+  /steno@4.0.2:
+    resolution: {integrity: sha512-yhPIQXjrlt1xv7dyPQg2P17URmXbuM5pdGkpiMB3RenprfiBlvK415Lctfe0eshk90oA7/tNq7WEiMK8RSP39A==}
+    engines: {node: '>=18'}
     dev: false
 
   /string-argv@0.3.2:
