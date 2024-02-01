@@ -75,6 +75,18 @@ pnpm add -g codew-cli
 
 </details>
 
+<details>
+<summary>homebrew</summary>
+
+<br>
+
+```sh
+brew tap bisquit/tap
+brew install codew
+```
+
+</details>
+
 Also, make sure that `code` command is installed. (Hit `code -v`, otherwise follow [here](https://code.visualstudio.com/docs/setup/mac#_launching-from-the-command-line))
 
 ## Usage
