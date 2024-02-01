@@ -2,30 +2,30 @@
 
 ```sh
 # Install dependencies
-pnpm i
+bun i
 
 # Run src (index.ts) directly
-pnpm dev
-pnpm dev .
+bun run dev
+bun run dev .
 ```
 
 ### Testing
 
 ```sh
-pnpm test
+bun run test
 ```
 
 ### Test local build version behavior
 
 ```sh
 # linking this pkg to global
-pnpm link -g
+bun link -g
 
 # watch build
 ## normal build (which is the same as production shipped)
-pnpm build --watch
+bun run build --watch
 ## debug mode (log extra informations)
-pnpm build:debug --watch
+bun run build:debug --watch
 
 # Then, cd any directory
 codew
@@ -34,15 +34,15 @@ codew
 If you installed published version, be sure removing it to avoid confliction.
 
 ```sh
-pnpm ls -g
-pnpm rm -g codew-cli
+bun pm ls -g
+bun rm -g codew-cli
 ```
 
 ## publish
 
 ```sh
 # Bump version, commit, tag, push
-pnpm bump
+bun run bump
 ```
 
 Then, Github Actions will publish to npm.
