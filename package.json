@@ -25,7 +25,8 @@
     "prettier:fix": "prettier --write src",
     "typecheck": "tsc --noEmit",
     "staticcheck": "conc bun:lint bun:prettier bun:typecheck",
-    "bump": "git checkout main && git pull && bumpp"
+    "bump": "git checkout main && git pull && bumpp",
+    "compile": "bun build src/index.ts --compile --outfile bin/codew"
   },
   "dependencies": {
     "@clack/prompts": "^0.7.0",

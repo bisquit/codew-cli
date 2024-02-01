@@ -46,3 +46,9 @@ bun run bump
 ```
 
 Then, Github Actions will publish to npm.
+
+## Compile to binary
+
+```sh
+bun run compile
+```
