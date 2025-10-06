@@ -33,7 +33,7 @@
     "execa": "^8.0.1",
     "lowdb": "^6.1.1",
     "mkdirp": "^3.0.1",
-    "picocolors": "^1.0.0",
+    "picocolors": "^1.1.1",
     "slash": "^5.1.0"
   },
   "devDependencies": {
