@@ -1,5 +1,7 @@
 import { $ } from 'execa';
 
-export async function openWorkspace(workspacePath: string) {
-  await $`code ${workspacePath}`;
+export type Editor = 'code' | 'antigravity' | 'agy';
+
+export async function openWorkspace(workspacePath: string, editor: Editor = 'code') {
+  await $`${editor} ${workspacePath}`;
 }

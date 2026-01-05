@@ -18,7 +18,17 @@ afterEach(() => {
   vi.restoreAllMocks();
 });
 
-test('openWorkspace', async () => {
+test('openWorkspace with default editor (code)', async () => {
   await openWorkspace('.');
-  expect(spy).toHaveBeenLastCalledWith([['code ', ''], '.']);
+  expect(spy).toHaveBeenLastCalledWith([['', ' ', ''], 'code', '.']);
+});
+
+test('openWorkspace with antigravity editor', async () => {
+  await openWorkspace('.', 'antigravity');
+  expect(spy).toHaveBeenLastCalledWith([['', ' ', ''], 'antigravity', '.']);
+});
+
+test('openWorkspace with agy editor', async () => {
+  await openWorkspace('.', 'agy');
+  expect(spy).toHaveBeenLastCalledWith([['', ' ', ''], 'agy', '.']);
 });

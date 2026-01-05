@@ -18,7 +18,14 @@ cli(
 
     parameters: ['<path>'],
 
-    flags: {},
+    flags: {
+      editor: {
+        type: String,
+        alias: 'e',
+        default: 'code',
+        description: 'Editor to use (code, antigravity, agy)',
+      },
+    },
 
     help: {
       description: description,
@@ -29,6 +36,7 @@ cli(
   },
   async (argv) => {
     const path = argv._.path;
+    const editor = argv.flags.editor;
 
     try {
       await checkDir(path);
@@ -36,10 +44,10 @@ cli(
       const workspace = await getWorkspace(path);
 
       if (workspace && (await validateWorkspace(workspace))) {
-        await openWorkspace(workspace);
+        await openWorkspace(workspace, editor);
       } else {
         const workspace = await createWorkspace(path);
-        await openWorkspace(workspace);
+        await openWorkspace(workspace, editor);
       }
     } catch (e) {
       log.error(`${e}`);
